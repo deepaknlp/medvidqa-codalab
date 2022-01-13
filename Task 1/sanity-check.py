@@ -30,7 +30,7 @@ def check_fields(data_path):
 
 def check_file_name_and_type(submission_file):
 	### check the file name
-	if os.path.basename(submission_file)!="prediction.json":
+	if os.path.basename(submission_file)!="predictions.json":
 		print("submission json file name is invalid!")
 		sys.exit(0)
 
