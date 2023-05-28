@@ -10,32 +10,32 @@ def read_json(data_path):
 
 
 def check_fields(data_path):
-    #### check the json file contains the required fields
-    data_items = read_json(data_path)
-    for data_item in data_items:
-        if 'sample_id' not in data_item:
-            print(f"submitted prediction json file doesn't have required 'sample_id' field for {data_item}!")
-            sys.exit(0)
-            
-        if 'answer_start_second' not in data_item:
-            print(f"submitted prediction json file doesn't have required 'answer_start_second' field for {data_item}!")
-            sys.exit(0)
+	#### check the json file contains the required fields
+	data_items = read_json(data_path)
+	for data_item in data_items:
+		if 'sample_id' not in data_item:
+			print(f"submitted prediction json file doesn't have required 'sample_id' field for {data_item}!")
+			sys.exit(0)
+		if 'video_id' not in data_item:
+			print(f"submitted prediction json file doesn't have required 'video_id' field for {data_item}!")
+			sys.exit(0)
+		if 'question' not in data_item:
+			print(f"submitted prediction json file doesn't have required 'question' field for {data_item}!")
+			sys.exit(0)
+		
+		if data_item['sample_id']=='' or data_item['sample_id']==None:
+			print("'segment_id' field can not be empty")
+			sys.exit(0)
 
-        if 'answer_end_second' not in data_item:
-            print(f"submitted prediction json file doesn't have required 'answer_end_second' field for {data_item}!")
-            sys.exit(0)
-        
-        if data_item['sample_id']=='' or data_item['sample_id']==None:
-            print("'sample_id' field can not be empty")
-            sys.exit(0)
+		if data_item['video_id']=='' or data_item['video_id']==None:
+			print("'video_id' field can not be empty")
+			sys.exit(0)
 
-        if data_item['answer_start_second']=='' or data_item['answer_start_second']==None:
-            print("'answer_start_second' field can not be empty")
-            sys.exit(0)
+		if data_item['question']=='' or data_item['question']==None:
+			print("'question' field can not be empty")
+			sys.exit(0)
 
-        if data_item['answer_end_second']=='' or data_item['answer_end_second']==None:
-            print("'answer_start_second' field can not be empty")
-            sys.exit(0)
+	
 
 
 
