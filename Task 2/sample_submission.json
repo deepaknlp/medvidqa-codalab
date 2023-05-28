@@ -1,13 +1,17 @@
 [
-    {
+    
+     {
         "sample_id": 3019,
-        "answer_start_second": 29,
-        "answer_end_second": 48
+        "question": "How to apply pressure on the wound?",
+        "answer_start": "00:29",
+        "answer_end": "00:48",
+        "video_id": "wkF8OwsyNNQ"
     },
     {
         "sample_id": 3020,
-        "answer_start_second": 57,
-        "answer_end_second": 72
-    },
-    ...
+        "question": "How to put gauze inside the wound?",
+        "answer_start": "00:57",
+        "answer_end": "01:12",
+        "video_id": "wkF8OwsyNNQ"
+    }
 ]
